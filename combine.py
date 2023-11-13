@@ -25,8 +25,8 @@ def main():
     dest_folder = filedialog.askdirectory(
         title="Choose the destination for the merged files"
     )
-    # print(f"dest folder: {dest_folder}")
-    dest_folder = 'dest'
+    print(f"dest folder: {dest_folder}")
+    # dest_folder = 'dest'
 
     # gather the list of non FD files
     non_fd_list = []
@@ -55,7 +55,7 @@ def main():
         print(f"result written to {new_output}")
 
     input("Press Enter to Exit")  # wait for user input to close the session
-
+    
 
 if __name__ == "__main__":
     main()
