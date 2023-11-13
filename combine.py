@@ -13,12 +13,15 @@ def mergePDF(pdfs: tuple, output: str):
 
 
 def main():
+    input("Press Enter to begin: ")
     # file dialog to select all PDFs
+    print("Choose PDF files to merge")
     pdf_files = filedialog.askopenfilenames(
         multiple=True, title="Choose PDF files to Merge"
     )
     print(f"folder path: {pdf_files}")
 
+    print("Choose destination folder for merged PDFs")
     dest_folder = filedialog.askdirectory(
         title="Choose the destination for the merged files"
     )
