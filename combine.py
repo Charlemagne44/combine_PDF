@@ -8,24 +8,25 @@ def mergePDF(pdfs: tuple, output: str):
     pdfMerger = PyPDF2.PdfMerger()
     for pdf in pdfs:
         pdfMerger.append(pdf)
-        with open(output, "wb") as f:
-            pdfMerger.write(f)
+    with open(output, "wb") as f:
+        pdfMerger.write(f)
 
 
 def main():
     input("Press Enter to begin: ")
     # file dialog to select all PDFs
-    print("Choose PDF files to merge")
     pdf_files = filedialog.askopenfilenames(
         multiple=True, title="Choose PDF files to Merge"
     )
     print(f"folder path: {pdf_files}")
+    # pdf_files = ['resources/123456.pdf', 'resources/123456fd.pdf']
 
     print("Choose destination folder for merged PDFs")
     dest_folder = filedialog.askdirectory(
         title="Choose the destination for the merged files"
     )
-    print(f"dest folder: {dest_folder}")
+    # print(f"dest folder: {dest_folder}")
+    dest_folder = 'dest'
 
     # gather the list of non FD files
     non_fd_list = []
