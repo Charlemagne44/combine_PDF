@@ -49,7 +49,7 @@ def main():
             )
             continue
 
-        new_output = f"{dest_folder}/{num}-merged.pdf"
+        new_output = f"{dest_folder}/{num}.pdf"
         mergePDF((pdf, fd_path), new_output)
         print(f"file pairing: {(pdf, fd_path)}")
         print(f"result written to {new_output}")
